@@ -1,0 +1,213 @@
+:root {
+  --black: #121212;
+  --purple: #9b59b6;
+  --purple-dark: #8e44ad;
+  --purple-darker: #6a0dad;
+  --purple-light: #c39bd3;
+  --purple-glow: rgba(155, 89, 182, 0.5);
+  --text-light: #e0e0e0;
+  --text-purple: #d1b3ff;
+  --neon-purple: #d1b3ff;
+  --dark-gray: #1e1e1e;
+}
+
+body {
+  background-color: var(--black) !important;
+  color: var(--text-purple) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  transition: all 0.5s ease;
+}
+
+.bg-black {
+  background-color: var(--black) !important;
+  color: var(--text-purple) !important;
+}
+
+.text-purple-light {
+  color: var(--text-light) !important;
+}
+
+.text-purple {
+  color: var(--purple-light) !important;
+}
+
+.bg-purple {
+  background-color: var(--purple) !important;
+  color: var(--black) !important;
+}
+
+.border-purple {
+  border: 1px solid var(--purple) !important;
+}
+
+.shadow-purple {
+  box-shadow: 0 0 15px var(--purple-glow) !important;
+}
+
+.btn-purple {
+  background-color: var(--purple);
+  color: var(--black);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: var(--purple-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--purple-glow);
+}
+
+.btn-outline-purple {
+  border: 1px solid var(--purple);
+  color: var(--purple-light);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+  background-color: var(--purple);
+  color: var(--black);
+  box-shadow: 0 0 10px var(--purple-glow);
+}
+
+.card {
+  border-radius: 15px;
+  border: none !important;
+}
+
+.form-control, .form-select {
+  background-color: var(--black) !important;
+  color: var(--text-purple) !important;
+  border: 1px solid var(--purple) !important;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.25rem var(--purple-glow) !important;
+  border-color: var(--purple) !important;
+  color: var(--text-purple) !important;
+  background-color: var(--black) !important;
+}
+
+.list-group-item {
+  background-color: rgba(18, 18, 18, 0.8) !important;
+  color: var(--text-purple) !important;
+  border: 1px solid var(--purple-glow) !important;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.list-group-item:hover {
+  background-color: rgba(155, 89, 182, 0.2) !important;
+  box-shadow: 0 0 10px var(--purple-glow);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.task-category {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.category-work {
+  background-color: #e74c3c;
+  color: var(--black);
+}
+
+.category-personal {
+  background-color: #3498db;
+  color: var(--black);
+}
+
+.category-shopping {
+  background-color: #2ecc71;
+  color: var(--black);
+}
+
+.category-other {
+  background-color: #f39c12;
+  color: var(--black);
+}
+
+.priority-high {
+  color: #ff6b6b !important;
+  font-weight: bold;
+}
+
+.priority-medium {
+  color: #feca57 !important;
+  font-weight: bold;
+}
+
+.priority-low {
+  color: #48dbfb !important;
+  font-weight: bold;
+}
+
+.due-date {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+.overdue {
+  color: #ff6b6b !important;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.dropdown-menu {
+  background-color: var(--black) !important;
+  border: 1px solid var(--purple) !important;
+}
+
+.dropdown-item {
+  color: var(--text-purple) !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: var(--purple) !important;
+  color: var(--black) !important;
+}
+
+.modal-content {
+  background-color: var(--black) !important;
+  color: var(--text-purple) !important;
+  border: 1px solid var(--purple) !important;
+}
+
+/* Neon Purple Theme */
+body.neon-theme {
+  --black: var(--dark-gray);
+  --purple: #e1bbee;
+  --purple-dark: #d1b3ff;
+  --purple-darker: #b388ff;
+  --purple-light: #f5e6ff;
+  --purple-glow: rgba(209, 179, 255, 0.7);
+  --text-light: #000000;
+  --text-purple: #000000;
+}
